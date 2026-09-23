@@ -3,7 +3,7 @@
 # Salir inmediatamente si ocurre un error inesperado
 set -e
 
-DOTFILES_DIR="$HOME/dotfiles"
+DOTFILES_DIR="$HOME/git/dotfiles"
 
 echo "================================================="
 echo "  Iniciando instalación de Dotfiles..."
@@ -16,7 +16,7 @@ mkdir -p "$HOME/.local/bin"
 
 # 2. Crear enlaces simbólicos (remplaza archivos/enlaces previos con -sf)
 echo "--> Enlazando .bashrc..."
-ln -sf "$DOTFILES_DIR/.bashrc" "$HOME/.bashrc"
+ln -sf "$DOTFILES_DIR/bash/.bashrc" "$HOME/.bashrc"
 
 echo "--> Enlazando configuración de Starship..."
 ln -sf "$DOTFILES_DIR/config/starship/starship.toml" "$HOME/.config/starship/starship.toml"

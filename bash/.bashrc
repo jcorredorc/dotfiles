@@ -134,7 +134,7 @@ fi
 export PATH="$HOME/.npm-global/bin:$PATH"
 
 # cargar zoxide
-if command -v zoxide &> /dev/null: then
+if command -v zoxide &> /dev/null; then
 	eval "$(zoxide init bash)"
 fi
 
@@ -148,15 +148,15 @@ if command -v starship &> /dev/null; then
 fi
 
 # Cargar variables de entorno locales/secretas si existen
-if [ -f ~/.env ]; then
-    source ~/.env
+if [ -f "$HOME/.env" ]; then
+    source "$HOME/.env"
 fi
 
 # Source ROS2 Jazzy 
-if [-f /opt/ros/jazzy/setup.bash]; then
+if [ -f /opt/ros/jazzy/setup.bash ]; then
 	source /opt/ros/jazzy/setup.bash
 fi
 
-if [-f ~/ros_ws/install/setup.bash]; then
+if [ -f ~/ros_ws/install/setup.bash ]; then
 	source ~/ros_ws/install/setup.bash
 fi
