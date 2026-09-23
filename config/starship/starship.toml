@@ -1,0 +1,22 @@
+# ~/dotfiles/config/starship/starship.toml
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$line_break\
+$character"""
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+
+[git_branch]
+style = "bold purple"
+symbol = " "
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
